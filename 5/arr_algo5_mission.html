@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myArr={ 
+            '0':2,
+            '1':6,
+            '2':10,
+            '3':11,
+            '4':22,
+            '5':1,
+            '6':7,
+            'length1' :7,
+            'reduce' : function(fn){ 
+                var val= this[0]; 
+                for(i=1; i<myArr.length1; i++){
+                    val = fn(val,this[i],i,this);
+                }
+                return val;
+                }
+               
+        };
+      
+        //length가 1 이면 myArr[0] 호출?
+
+        var sum = myArr.reduce(function(pVal,cVal,idx,arr){ //pVal = 이전값, cVal = 현재값. , idx =인덱스 
+            return pVal + cVal;
+        });
+        console.log('sum : ' + sum);
+
+        var maxVal = myArr.reduce(function(pVal,cVal){
+            return pVal > cVal ? pVal : cVal;
+        });
+        console.log('maxVal : ' + maxVal);
+
+        var minVal = myArr.reduce(function(pVal,cVal){//처움에 2, 6 비교함. idx=1부터 넘어감
+            return pVal > cVal ? cVal : pVal;
+        });
+        console.log('min : ' + minVal);
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JS , true/false를 사용할 수 있는 값들을 알려줄 수 있는 예제
+        //false : 0, '' , undefined , null
+        // true : false 반대.
+        // and , or 차이점 ( 모든 프로그래밍 언어 동일)
+
+
+        // && false가 될 가능성이 높은 조건식을 앞쪽에 배치하는게 유리
+        // || true가 될 가능성이 높은 조건식을 앞쪽에 배치하는게 유리
+
+        function ck1(){
+            console.log('--ck1 called--');
+            return 1;
+        }
+
+        function ck2(){
+            console.log('--ck2 called--');
+            return '';
+        }
+
+        function ck3(){
+            console.log('--ck3 called--');
+            
+        }
+
+        if(ck1() || ck2() && ck3()){ //true를 만나는 순간 뒤에는 보지도 않는다. >> ch1이랑 wow 둘다 실행
+            console.log('WOW!');
+        }
+
+        if(ck2() && ck1()){  // false. >> ck2만 실행.
+            console.log('WOW! 두번째');  
+        }
+    </script>
+</body>
+</html>

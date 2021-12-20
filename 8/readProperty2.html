@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="favorite">
+        <input type="checkbox" name="dog" value="pome" aaa="a">포메라니안<br>
+        <input type="checkbox" name="dog" value="dalma" aaa="b">달마시안<br>
+        <input type="checkbox" name="dog" value="bool" aaa="c">불독<br>
+    </form>
+    
+    <script>
+        var result= [];
+        var fm = document.querySelector('#favorite');
+        var list = fm.children;
+        console.log(fm.nodeName);
+        
+        for ( var i=0; i<list.length; i++){
+            if(list[i].nodeName === 'INPUT' && list[i].type ==='checkbox'){ //nodeName 은 태그가 넘어옴.(대문자로)
+            result.push(list[i].getAttribute('value'));
+           
+            //result.push(list[i].aaa);
+
+        }
+    }
+    console.log(result.join(', '));
+
+    </script>
+</body>
+</html>

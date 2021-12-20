@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var myArr={ 
+            
+            '0':2,
+            '1':6,
+            '2':10,
+            '3':11,
+            '4':22,
+            '5':1,
+            '6':7,
+            'length1' :7,
+            'filter' : function(fn){ 
+                 var temp = [];
+                for(var i=0; i<myArr.length1; i++){
+                    var val = fn(this[i]);
+                    if(val){ //이 자체가 t(1) / f(0)
+                        temp.push(this[i]);
+                    }
+                }
+                return temp;    
+                }
+            
+        };
+
+        var arr2 = myArr.filter(function(v){
+            return v % 2; // 0 or 1
+        });
+
+        console.log('myArr length : ' + myArr.length)
+
+
+        console.log(arr2);
+        
+
+
+    </script>
+</body>
+</html>

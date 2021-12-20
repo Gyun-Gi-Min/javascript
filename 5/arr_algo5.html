@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr= [2,6,10,11,22,1,7];
+        var sum = arr.reduce(function(pVal,cVal,idx,arr){ //pVal = 이전값, cVal = 현재값. , idx =인덱스 
+            return pVal + cVal;
+        });
+        console.log('sum : ' + sum);
+
+        var maxVal = arr.reduce(function(pVal,cVal){
+            return pVal > cVal ? pVal : cVal;
+        });
+        console.log('maxVal : ' + maxVal);
+
+        var minVal = arr.reduce(function(pVal,cVal){//처움에 2, 6 비교함. idx=1부터 넘어감
+            return pVal > cVal ? cVal : pVal;
+        });
+        console.log('maxVal : ' + minVal);
+
+
+    </script>
+</body>
+</html>

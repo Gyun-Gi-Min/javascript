@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="school" href="https://www.google.com">구글</a>
+    <button onclick="changeHref()">변경</button>
+
+    <script>
+        // HTML에서 
+        // property vs attribute
+        // attribute는 html 문서상에서 적용된 속성을 의미
+        // property는 실제로 렌더링 되어서 현재 적용되어 있는 속성의 의미
+       var anchor = document.querySelector('#school');
+       console.log(anchor.href); 
+
+       function changeHref(){
+        anchor.href="http://www.naver.com";
+       }
+       
+
+    </script>
+</body>
+</html>

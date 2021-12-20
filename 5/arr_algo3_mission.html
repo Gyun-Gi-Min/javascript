@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           var myArr={ 
+            '0':2,
+            '1':6,
+            '2':10,
+            '3':11,
+            '4':22,
+            '5':1,
+            '6':7,
+            'length1' :7,
+            'map' : function(fn){ //map을 했을때 기능. 배열에 값을 넣어준다.
+
+                var temp = [];
+                for (var i =0;  i<this.length1; i++){
+                    var val = fn(this[i]);
+                    temp.push(val);
+                }
+                return temp;
+               }
+        };
+
+        var arr2 = myArr.map(function(v){
+            return v+2;
+        });
+
+        console.log(myArr);
+        console.log(arr2);
+
+    </script>
+</body>
+</html>
